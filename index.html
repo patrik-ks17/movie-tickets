@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app-container">
+      <div class="select-movie-container"></div>
+      <div class="movie-inner-container"></div>
+   
+
+
+         
+      <ul class="showcase">
+        <li>
+          <div class="seat-preview"></div>
+          <small>Szabad</small>
+        </li>
+        <li>
+          <div class="seat-preview occupied"></div>
+          <small>Foglalt</small>
+        </li>
+        <li>
+          <div class="seat-preview selected"></div>
+          <small>Kiválasztva</small>
+        </li>
+      </ul>
+
+      <p class="text text-center">
+        Kiválasztottál
+        <span id="count">0</span>
+        széket, aminek az ára összesen:
+        <span id="total">0</span>
+        Ft.
+      </p>
+      <form id="book-seats">
+        <input type="text" class="mb-2" name="name" placeholder="Név" required="" value="" />
+        <button type="submit" class="btn btn-success btn-sm">Foglalás</button>
+      </form>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
