@@ -50,7 +50,6 @@ function generateSeats(numberOfRows, numberOfSeatsperRow) {
 
 
 function renderSelect() {
-   
     let movieSelectHTML = `
     <form id="select-movie-form" class="movie-form">
     <label class="w-100">
@@ -60,7 +59,6 @@ function renderSelect() {
       if (movies[movie].id != undefined) 
         movieSelectHTML += `<option value="${movies[movie].id}">${movies[movie].name} (${movies[movie].price} Ft)</option>`
     }
-
     movieSelectHTML += `
     </select>
     </label>
@@ -74,12 +72,10 @@ function renderSeats(selectedId) {
     let nOfRows = selectedMovie.numberOfRows;
     let nOfSeats = selectedMovie.numberOfSeats;
     let seatMap = generateSeats(nOfRows, nOfSeats);
-
+    
     for (bookedSeat of selectedMovie.bookedSeats) {
         seatMap.get(bookedSeat.row).set(bookedSeat.number, "Foglalt");
     }
-
-
     let rowsHTML = ""
     let firstRow = "<div class='row-symbol'></div>";
 
@@ -87,7 +83,6 @@ function renderSeats(selectedId) {
         firstRow += `<div class="column-number">${seatKey}</div>`;
     });
     rowsHTML += `<div class="seat-row">${firstRow}</div>`;
-
 
     seatMap.forEach((rowValue, rowKey) => {
             //* egy sor
@@ -128,10 +123,9 @@ function selectChange() {
 
 function addSelectedSeat() {
   let seats = document.querySelectorAll('.seat')
-  let clicked = {}
   seats.forEach((value, index) => { 
     value.addEventListener('click', () => {
-        clicked = { 
+        let clicked = { 
           "row": value.attributes['data-row'].value, 
           "number": value.attributes['data-seat'].value
         }
@@ -145,7 +139,6 @@ function addSelectedSeat() {
           movies.selectedSeats.splice(find, 1)
           value.classList.remove('selected');
         }
-        console.log();
         document.getElementById('count').innerHTML = movies.selectedSeats.length
         document.getElementById('total').innerHTML = movies.selectedSeats.length * movies[movies.selectedId].price
     });
@@ -157,15 +150,15 @@ function addSelectedSeat() {
 let movies = {}
 
 fetch('https://kodbazis.hu/api/movies')
-    .then(res => res.ok ? res.json(): [])
-    .then(movies_res => {
-        movies = movies_res;
-        console.log(movies_res[-1]);
-        movies.selectedId = 0;
-        movies.selectedSeats = [];
-        renderSelect();
-        selectChange();
-});
+  .then(res => res.ok ? res.json() : [])
+  .then(movies_res => { 
+    delete movies_res[-1]
+    movies = movies_res;
+    movies.selectedId = 0;
+    movies.selectedSeats = [];
+    renderSelect();
+    selectChange();
+  })
 
 document.addEventListener('submit', (event) => { 
   event.preventDefault();
