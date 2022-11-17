@@ -1,0 +1,230 @@
+[
+  {
+    "id": 1,
+    "name": "Avengers",
+    "price": 1750,
+    "numberOfSeats": 10,
+    "numberOfRows": 11,
+    "bookedSeats": [
+      {
+        "row": "I",
+        "number": 4
+      },
+      {
+        "row": "I",
+        "number": 5
+      },
+      {
+        "row": "I",
+        "number": 6
+      },
+      {
+        "row": "G",
+        "number": 7
+      },
+      {
+        "row": "G",
+        "number": 8
+      },
+      {
+        "row": "J",
+        "number": 3
+      },
+      {
+        "row": "J",
+        "number": 4
+      },
+      {
+        "row": "J",
+        "number": 5
+      },
+      {
+        "row": "J",
+        "number": 6
+      },
+      {
+        "row": "J",
+        "number": 7
+      },
+      {
+        "row": "J",
+        "number": 8
+      },
+      {
+        "row": "F",
+        "number": 4
+      },
+      {
+        "row": "F",
+        "number": 3
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Joker",
+    "price": 1600,
+    "numberOfSeats": 9,
+    "numberOfRows": 6,
+    "bookedSeats": [
+      {
+        "row": "F",
+        "number": 3
+      },
+      {
+        "row": "E",
+        "number": 4
+      },
+      {
+        "row": "D",
+        "number": 5
+      },
+      {
+        "row": "D",
+        "number": 6
+      },
+      {
+        "row": "E",
+        "number": 5
+      },
+      {
+        "row": "E",
+        "number": 6
+      },
+      {
+        "row": "F",
+        "number": 7
+      },
+      {
+        "row": "F",
+        "number": 4
+      },
+      {
+        "row": "E",
+        "number": 2
+      },
+      {
+        "row": "D",
+        "number": 1
+      },
+      {
+        "row": "E",
+        "number": 1
+      },
+      {
+        "row": "E",
+        "number": 8
+      },
+      {
+        "row": "E",
+        "number": 9
+      },
+      {
+        "row": "D",
+        "number": 2
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Toy Story 4",
+    "price": 900,
+    "numberOfSeats": 12,
+    "numberOfRows": 8,
+    "bookedSeats": [
+      {
+        "row": "F",
+        "number": 3
+      },
+      {
+        "row": "F",
+        "number": 4
+      },
+      {
+        "row": "F",
+        "number": 5
+      },
+      {
+        "row": "F",
+        "number": 6
+      },
+      {
+        "row": "G",
+        "number": 7
+      },
+      {
+        "row": "G",
+        "number": 6
+      },
+      {
+        "row": "G",
+        "number": 8
+      },
+      {
+        "row": "H",
+        "number": 7
+      },
+      {
+        "row": "H",
+        "number": 8
+      },
+      {
+        "row": "E",
+        "number": 9
+      },
+      {
+        "row": "D",
+        "number": 6
+      },
+      {
+        "row": "D",
+        "number": 5
+      },
+      {
+        "row": "F",
+        "number": 1
+      },
+      {
+        "row": "F",
+        "number": 2
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "The Lion King",
+    "price": 1200,
+    "numberOfSeats": 8,
+    "numberOfRows": 6,
+    "bookedSeats": [
+      {
+        "row": "D",
+        "number": 3
+      },
+      {
+        "row": "D",
+        "number": 4
+      },
+      {
+        "row": "E",
+        "number": 5
+      },
+      {
+        "row": "E",
+        "number": 6
+      },
+      {
+        "row": "E",
+        "number": 7
+      },
+      {
+        "row": "E",
+        "number": 3
+      },
+      {
+        "row": "E",
+        "number": 4
+      }
+    ]
+  }
+]

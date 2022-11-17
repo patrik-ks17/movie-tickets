@@ -64,6 +64,7 @@ function renderSelect() {
     </label>
     </form>`
     document.querySelector('.select-movie-container').innerHTML = movieSelectHTML
+    
 }
 
 
@@ -152,7 +153,6 @@ let movies = {}
 fetch('https://kodbazis.hu/api/movies')
   .then(res => res.ok ? res.json() : [])
   .then(movies_res => { 
-    delete movies_res[-1]
     movies = movies_res;
     movies.selectedId = 0;
     movies.selectedSeats = [];
@@ -160,26 +160,26 @@ fetch('https://kodbazis.hu/api/movies')
     selectChange();
   })
 
-document.addEventListener('submit', (event) => { 
-  event.preventDefault();
-  fetch(`https://kodbazis.hu/api/book-seats/${movies.selectedId}`, {
-    method: 'POST',
-    body: movies.selectedSeats,
-    headers: { 
-			'Content-Type': 'application/json',
-		}
-  });
-  movies.selectedSeats = []
-  document.querySelectorAll('.seat').forEach((val, ind) => {
-    if (val.classList.contains('selected')) {
-      val.classList.add('occupied')
-      val.classList.remove('selected')
-    }
-});
-  document.querySelector('[name="name"][placeholder="Név"]').value = ""
-  document.getElementById('count').innerHTML = "0"
-  document.getElementById('total').innerHTML = "0"
-});
+// document.addEventListener('submit', (event) => { 
+//   event.preventDefault();
+//   fetch(`https://kodbazis.hu/api/book-seats/${movies.selectedId}`, {
+//       method: 'POST',
+//       body: movies.selectedSeats,
+//       headers: { 
+//         'Content-Type': 'application/json',
+//       }
+//   });
+//   movies.selectedSeats = []
+//   document.querySelectorAll('.seat').forEach((val, ind) => {
+//     if (val.classList.contains('selected')) {
+//       val.classList.add('occupied')
+//       val.classList.remove('selected')
+//     }
+//   });
+//   document.querySelector('[name="name"][placeholder="Név"]').value = ""
+//   document.getElementById('count').innerHTML = "0"
+//   document.getElementById('total').innerHTML = "0"
+// });
 
 
 
